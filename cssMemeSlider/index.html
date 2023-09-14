@@ -5,28 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS MEME SLIDER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <section class="container">
-        <div class="slider">
-            <img id="slide-1" src="assets/img/baby.jpg" alt="img1">
-            <img id="slide-2" src="assets/img/baby2.jpg" alt="img2">
-            <img id="slide-3" src="assets/img/horse.jpg" alt="img3">
-            <img id="slide-4" src="assets/img/leonardo.jpg" alt="img4">
+        <input type="radio" name="radio" id="radio-1" checked>
+        <input type="radio" name="radio" id="radio-2">
+        <input type="radio" name="radio" id="radio-3">
+        <input type="radio" name="radio" id="radio-4">
+        <div class="slides">
+            <img class="slide slide-1" src="assets/img/baby.jpg" alt="img1">
+            <img class="slide" src="assets/img/baby2.jpg" alt="img2">
+            <img class="slide" src="assets/img/horse.jpg" alt="img3">
+            <img class="slide" src="assets/img/leonardo.jpg" alt="img4">
         </div>
-        <div class="slider-wrapper">
-            <div class="slider-subtitle">
-                <h3 id="title-1">I'm the best</h3>
-                <h3 id="title-2">Don't stop!</h3>
-                <h3 id="title-3">We can still make it!</h3>
-                <h3 id="title-4">Never give up!</h3>
+        <div class="slides-wrapper">
+            <div class="slider-titles">
+                <div class="titles-wrapper">
+                    <h2 class="title title-1">I'm the best</h2>
+                    <h2 class="title">Don't stop!</h2>
+                    <h2 class="title">We can still make it!</h2>
+                    <h2 class="title">Never give up!</h2>
+                </div>
             </div>
-            <div class="slider-nav">
-                <a href="#slide-1" class="dot"><span></span></a>
-                <a href="#slide-2" class="dot"><span></span></a>
-                <a href="#slide-3" class="dot"><span></span></a>
-                <a href="#slide-4" class="dot"><span></span></a>
+            <div class="controls">
+                <label for="radio-1">
+                    <span class="dot"></span>
+                </label>
+                <label for="radio-2">
+                    <span class="dot"></span>
+                </label>
+                <label for="radio-3">
+                    <span class="dot"></span>
+                </label>
+                <label for="radio-4">
+                    <span class="dot"></span>
+                </label>
             </div>
         </div>
     </section>
