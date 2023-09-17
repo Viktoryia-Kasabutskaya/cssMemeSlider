@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kaushan Script", sans-serif;
+  letter-spacing: 0.1rem;
+  color: white;
+  background-color: rgb(21, 21, 21);
+}
+
+.container {
+  margin: 0 auto 0;
+  width: 60%;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.slides {
+  width: 400%;
+  display: flex;
+  align-items: center;
+}
+
+.slide {
+  width: 25%;
+  transition: all 0.5s ease;
+}
+
+.slider-titles {
+  width: 60%;
+  overflow: hidden;
+}
+
+.titles-wrapper {
+  display: flex;
+  width: 400%;
+}
+
+.title {
+  width: 25%;
+  transition: all 0.5s ease;
+}
+
+.slides-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 1rem;
+}
+
+.controls {
+  display: flex;
+}
+
+input[name="radio"] {
+  display: none;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  cursor: pointer;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  background-color: rgb(35, 120, 180);
+  border: 0.2rem solid rgb(35, 120, 180);
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+
+.dot:hover {
+  background-color: white;
+  border: 0.2rem solid white;
+}
+
+.dot:active {
+  background-color: rgb(255, 255, 131);
+  border: 0.2rem solid rgb(255, 255, 131);
+}
+
+#radio-1:checked ~ .slides .slide-1,
+#radio-1:checked ~ .slides-wrapper .title-1 {
+  margin-left: 0;
+}
+
+#radio-2:checked ~ .slides .slide-1,
+#radio-2:checked ~ .slides-wrapper .title-1 {
+  margin-left: -25%;
+}
+
+#radio-3:checked ~ .slides .slide-1,
+#radio-3:checked ~ .slides-wrapper .title-1 {
+  margin-left: -50%;
+}
+
+#radio-4:checked ~ .slides .slide-1,
+#radio-4:checked ~ .slides-wrapper .title-1 {
+  margin-left: -75%;
+}
+
+#radio-1:checked ~ .slides-wrapper label[for="radio-1"] .dot,
+#radio-2:checked ~ .slides-wrapper label[for="radio-2"] .dot,
+#radio-3:checked ~ .slides-wrapper label[for="radio-3"] .dot,
+#radio-4:checked ~ .slides-wrapper label[for="radio-4"] .dot {
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    width: 90%;
+  }
+
+  .slides-wrapper {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .slider-titles {
+    width: 100%;
+  }
+
+  .dot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+@media (max-width: 540px) {
+  h1 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  label {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .dot {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+@media (max-width: 450px) {
+  h1 {
+    font-size: 1.1rem;
+    margin: 1.1rem 0;
+  }
+}
